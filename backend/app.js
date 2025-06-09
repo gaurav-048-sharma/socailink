@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT;
 const cors = require('cors');
 
 const connectDb = require('./config/connectDb');
@@ -16,13 +15,8 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    const { user } = req;
-    if (user) {
-        return res.send(`Welcome ${user.name || user.email}`);
-    }
-
-    res.send(`Welcome ${user} the routes are set`, {user});
-})
+  res.send(`Welcome, the routes are set`);
+});
 
 app.use('/api/auth', authRoute)
 
