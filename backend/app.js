@@ -26,6 +26,8 @@ app.get('/', (req, res) => {
 
 // app.use('/api/auth', authRoute)
 
-app.listen(PORT , (req, res) => {
-    console.log(`Server is running on port http://localhost:${PORT}`);
-})
+// app.listen(PORT , (req, res) => {
+//     console.log(`Server is running on port http://localhost:${PORT}`);
+// })
+
+module.exports = app; // Export the app for testing or further configuration

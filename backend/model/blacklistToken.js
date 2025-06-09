@@ -5,7 +5,7 @@ const blacklistedSchema =new mongoose.Schema({
         type: String,
         required: true,
         unique: true, // ✅ Prevent duplicate tokens
-        index: true   // ✅ Faster queries
+        app: true   // ✅ Faster queries
     },
     created_at : {
         type: Date, 

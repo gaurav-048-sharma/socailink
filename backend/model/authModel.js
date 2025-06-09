@@ -33,8 +33,8 @@ const userSchema = new Schema({
     },
     googleId: {
         type: String,
-        sparse: true, // Still allows nulls to be excluded from index
-        default: undefined // Avoid indexing null values entirely
+        sparse: true, // Still allows nulls to be excluded from app
+        default: undefined // Avoid apping null values entirely
     },
     microsoftId: { 
         type: String
