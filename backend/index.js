@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const connectDb = require('./config/connectDb');
 connectDb();
-const authRoute = require('./route/authRoute.js');
+// const authRoute = require('./route/authRoute.js');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.send(`Welcome ${user}`, {user});
 })
 
-app.use('/api/auth', authRoute)
+// app.use('/api/auth', authRoute)
 
 app.listen(PORT , (req, res) => {
     console.log(`Server is running on port http://localhost:${PORT}`);
