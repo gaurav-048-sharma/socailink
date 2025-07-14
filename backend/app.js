@@ -15,7 +15,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-  res.send(`Welcome, the routes are set`);
+  return res.send(`Welcome, the routes are set Lets go `);
 });
 
 app.use('/api/auth', authRoute)
